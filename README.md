@@ -24,4 +24,5 @@
 	-e MYSQL_HOST=mysql \
 	-e MYSQL_USER=user \
 	-e MYSQL_PASS=pass \
+	-e CREATE_ONE_FILE_PER_DB=true \
 	vixns/mysql-s3backup /dump.sh
