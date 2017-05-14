@@ -26,3 +26,13 @@
 	-e MYSQL_PASS=pass \
 	-e CREATE_ONE_FILE_PER_DB=true \
 	vixns/mysql-s3backup /dump.sh
+
+### Mysqldump, local backup only
+
+	docker run --rm \
+	-e MYSQL_PORT=3306 \
+	-e MYSQL_HOST=mysql \
+	-e MYSQL_USER=user \
+	-e MYSQL_PASS=pass \
+	-e CREATE_ONE_FILE_PER_DB=true \
+	vixns/mysql-s3backup /dump.sh
