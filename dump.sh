@@ -7,10 +7,12 @@ filename=mysqldump-$(date -I'minutes').sql.gz
 cat > config.cnf <<EOF
 [client]
 user = ${MYSQL_USER}
-password = ${MYSQL_PASS}
+password = "${MYSQL_PASS}"
 host = ${MYSQL_HOST}
 port = ${MYSQL_PORT}
 EOF
+
+chmod 0600 config.cnf
 
 mkdir -p /backups
 
